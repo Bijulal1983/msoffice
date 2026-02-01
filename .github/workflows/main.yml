@@ -51,6 +51,6 @@ jobs:
         inlineScript: |
           az storage blob upload-batch \
             --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" \
-            --destination build \
+            --destination buildcontainer \
             --source "$GITHUB_WORKSPACE/dist" \
             --overwrite
